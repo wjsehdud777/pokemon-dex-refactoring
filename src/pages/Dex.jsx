@@ -18,10 +18,18 @@ const Dex = () => {
     setSelectedPokemon([...selectedPokemon, pokemon]);
   };
 
+  const removePokemon = (pokemon) => {
+    const updatedPokemon = selectedPokemon.filter((e) => e.id !== pokemon.id);
+    setSelectedPokemon(updatedPokemon);
+  };
+
   return (
     <div>
       <h1>Pokemon Dex</h1>
-      <Dashboard selectedPokemon={selectedPokemon} />
+      <Dashboard
+        selectedPokemon={selectedPokemon}
+        removePokemon={removePokemon}
+      />
       <PokemonList pokemonData={MOCK_DATA} addPokemon={addPokemon} />
     </div>
   );

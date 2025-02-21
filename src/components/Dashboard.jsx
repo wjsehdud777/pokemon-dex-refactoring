@@ -10,7 +10,7 @@ export default function Dashboard({ selectedPokemon, removePokemon }) {
             <div key={pokemon.id}>
               <img src={pokemon.img_url} alt={pokemon.korean_name} />
               <h3>{pokemon.korean_name}</h3>
-              <button onClick={() => removePokemon(pokemon.id)}>삭제</button>
+              <button onClick={() => removePokemon(pokemon)}>삭제</button>
             </div>
           );
         })}
