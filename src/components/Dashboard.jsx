@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { usePokemon } from "../context/PokemonContext";
 
-export default function Dashboard({ selectedPokemon, removePokemon }) {
+export default function Dashboard() {
+  const { selectedPokemon, removePokemon } = usePokemon();
+
   return (
     <div>
       <h2>Selected Pokemon!</h2>

@@ -5,7 +5,7 @@ export default function PokemonCard({ pokemon, addPokemon }) {
     <Link key={pokemon.id} to={`/detail/${pokemon.id}`}>
       <img src={pokemon.img_url} alt={pokemon.korean_name} />
       <h3>{pokemon.korean_name}</h3>
-      <button onClick={() => addPokemon(pokemon)}>추가</button>
+      <button onClick={(e) => addPokemon(e, pokemon)}>추가</button>
     </Link>
   );
 }
