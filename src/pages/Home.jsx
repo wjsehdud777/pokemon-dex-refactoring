@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 const Home = () => {
   return (
-    <div>
+    <StHomeContainer>
       <h1>Welcome to Pokemon Dex</h1>
       <Link to={"/dex"}>
         <StHomeButton>포켓몬 도감 시작하기</StHomeButton>
       </Link>
-    </div>
+    </StHomeContainer>
   );
 };
 
@@ -21,11 +21,20 @@ const StHomeButton = styled.button`
   font-size: 16px;
   padding: 10px 20px;
   text-transform: uppercase;
+  transition: background-color 0.5s ease;
 
   &:hover {
-    transition: background-color 0.5s ease;
     background-color: rgb(114, 0, 0);
   }
+`;
+
+const StHomeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(225, 225, 225);
 `;
 
 export default Home;
